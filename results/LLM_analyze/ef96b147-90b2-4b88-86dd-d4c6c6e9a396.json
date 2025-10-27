@@ -1,0 +1,238 @@
+{
+  "id": "ef96b147-90b2-4b88-86dd-d4c6c6e9a396",
+  "timestamp": "2025-10-27T00:27:02.227Z",
+  "dependencies": {
+    "/home/espreso/Desktop/service_app/files_from_git/arrayUtils.ts": {
+      "imports": [
+        "{ add } from \"./mathUtils\";",
+        "{ formatResult } from \"./stringUtils\";",
+        "_ from \"lodash\";",
+        "{ processTemplate } from \"./templateUtils\";"
+      ],
+      "exports": [
+        "const calculateAverage = (numbers: number[]): number => {",
+        "const processData = (data: number[]): string => {",
+        "const createSummary = (data: number[]): string => {"
+      ]
+    },
+    "/home/espreso/Desktop/service_app/files_from_git/mathUtils.ts": {
+      "imports": [
+        "{ v4 as uuidv4 } from \"uuid\";"
+      ],
+      "exports": [
+        "type MathConfig = {",
+        "const add = (a: number, b: number): number => a + b;",
+        "const createConfig = (precision: number = 2): MathConfig => {",
+        "default defaultConfig;"
+      ]
+    },
+    "/home/espreso/Desktop/service_app/files_from_git/statsUtils.ts": {
+      "imports": [
+        "{ add } from './mathUtils.js';",
+        "{ formatResult } from './stringUtils.js';",
+        "{ processTemplate } from './templateUtils';",
+        "{ calculateAverage } from './arrayUtils.js';"
+      ],
+      "exports": [
+        "const generateReport = (numbers: number[]): string => {",
+        "const calculateStats = (data: number[]): {",
+        "default generateReport;"
+      ]
+    },
+    "/home/espreso/Desktop/service_app/files_from_git/stringUtils.ts": {
+      "imports": [
+        "{ add } from './mathUtils';",
+        "{ formatResult } from './stringUtils';",
+        "{ processTemplate } from './templateUtils';",
+        "{ calculateAverage } from './arrayUtils';"
+      ],
+      "exports": [
+        "const generateReport = (numbers: number[]): string => {",
+        "const calculateStats = (data: number[]): {",
+        "default generateReport;"
+      ]
+    },
+    "/home/espreso/Desktop/service_app/files_from_git/templateUtils.ts": {
+      "imports": [
+        "{ createConfig } from \"./mathUtils\";",
+        "{ formatResult } from \"./stringUtils\";"
+      ],
+      "exports": [
+        "const processTemplate = (text: string, type: string): string =>",
+        "const applyMathFormat = (value: number): string => {",
+        "const validateTemplate = (template: string): boolean =>",
+        "default processTemplate;"
+      ]
+    }
+  },
+  "geminiAnalysis": {
+    "files": {
+      "/home/espreso/Desktop/service_app/files_from_git/arrayUtils.ts": {
+        "imports": {
+          "named": [
+            "./mathUtils",
+            "./stringUtils",
+            "./templateUtils"
+          ],
+          "default": [
+            "lodash"
+          ],
+          "namespace": [],
+          "type_only": [],
+          "side_effect": []
+        },
+        "exports": {
+          "named": [
+            "const calculateAverage = (numbers: number[]): number => {",
+            "const processData = (data: number[]): string => {",
+            "const createSummary = (data: number[]): string => {"
+          ],
+          "default": [],
+          "re_exports": [],
+          "type_only": []
+        },
+        "issues": [
+          "Circular dependency detected involving: arrayUtils.ts -> stringUtils.ts -> arrayUtils.ts. Consider refactoring to break the cycle by extracting common dependencies or re-organizing responsibilities."
+        ],
+        "metrics": {
+          "import_count": 4,
+          "export_count": 3,
+          "complexity_score": 7
+        }
+      },
+      "/home/espreso/Desktop/service_app/files_from_git/mathUtils.ts": {
+        "imports": {
+          "named": [
+            "uuid"
+          ],
+          "default": [],
+          "namespace": [],
+          "type_only": [],
+          "side_effect": []
+        },
+        "exports": {
+          "named": [
+            "const add = (a: number, b: number): number => a + b;",
+            "const createConfig = (precision: number = 2): MathConfig => {"
+          ],
+          "default": [
+            "default defaultConfig;"
+          ],
+          "re_exports": [],
+          "type_only": [
+            "type MathConfig = {"
+          ]
+        },
+        "issues": [],
+        "metrics": {
+          "import_count": 1,
+          "export_count": 4,
+          "complexity_score": 5
+        }
+      },
+      "/home/espreso/Desktop/service_app/files_from_git/statsUtils.ts": {
+        "imports": {
+          "named": [
+            "./mathUtils.js",
+            "./stringUtils.js",
+            "./templateUtils",
+            "./arrayUtils.js"
+          ],
+          "default": [],
+          "namespace": [],
+          "type_only": [],
+          "side_effect": []
+        },
+        "exports": {
+          "named": [
+            "const generateReport = (numbers: number[]): string => {",
+            "const calculateStats = (data: number[]): {"
+          ],
+          "default": [
+            "default generateReport;"
+          ],
+          "re_exports": [],
+          "type_only": []
+        },
+        "issues": [],
+        "metrics": {
+          "import_count": 4,
+          "export_count": 3,
+          "complexity_score": 7
+        }
+      },
+      "/home/espreso/Desktop/service_app/files_from_git/stringUtils.ts": {
+        "imports": {
+          "named": [
+            "./mathUtils",
+            "./stringUtils",
+            "./templateUtils",
+            "./arrayUtils"
+          ],
+          "default": [],
+          "namespace": [],
+          "type_only": [],
+          "side_effect": []
+        },
+        "exports": {
+          "named": [
+            "const generateReport = (numbers: number[]): string => {",
+            "const calculateStats = (data: number[]): {"
+          ],
+          "default": [
+            "default generateReport;"
+          ],
+          "re_exports": [],
+          "type_only": []
+        },
+        "issues": [
+          "Self-import detected: stringUtils.ts imports from itself.",
+          "Circular dependency detected involving: stringUtils.ts -> templateUtils.ts -> stringUtils.ts. Consider refactoring to break the cycle by extracting common dependencies or re-organizing responsibilities.",
+          "Circular dependency detected involving: stringUtils.ts -> arrayUtils.ts -> stringUtils.ts. Consider refactoring to break the cycle by extracting common dependencies or re-organizing responsibilities."
+        ],
+        "metrics": {
+          "import_count": 4,
+          "export_count": 3,
+          "complexity_score": 7
+        }
+      },
+      "/home/espreso/Desktop/service_app/files_from_git/templateUtils.ts": {
+        "imports": {
+          "named": [
+            "./mathUtils",
+            "./stringUtils"
+          ],
+          "default": [],
+          "namespace": [],
+          "type_only": [],
+          "side_effect": []
+        },
+        "exports": {
+          "named": [
+            "const processTemplate = (text: string, type: string): string =>",
+            "const applyMathFormat = (value: number): string => {",
+            "const validateTemplate = (template: string): boolean =>"
+          ],
+          "default": [
+            "default processTemplate;"
+          ],
+          "re_exports": [],
+          "type_only": []
+        },
+        "issues": [
+          "Circular dependency detected involving: templateUtils.ts -> stringUtils.ts -> templateUtils.ts. Consider refactoring to break the cycle by extracting common dependencies or re-organizing responsibilities."
+        ],
+        "metrics": {
+          "import_count": 2,
+          "export_count": 4,
+          "complexity_score": 6
+        }
+      }
+    },
+    "summary": {
+      "total_files": 5,
+      "total_external_dependencies": 2,
+      "circular_dependencies_detected": 3
+    }
+  }
+}

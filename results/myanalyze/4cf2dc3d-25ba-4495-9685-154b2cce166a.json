@@ -1,0 +1,169 @@
+{
+  "id": "4cf2dc3d-25ba-4495-9685-154b2cce166a",
+  "timestamp": "2025-10-27T00:29:43.466Z",
+  "folders": [
+    "/home/espreso/Desktop/service_app/files_from_git"
+  ],
+  "analysis": {
+    "files": {
+      "/home/espreso/Desktop/service_app/files_from_git/arrayUtils.ts": {
+        "imports": {
+          "named": [
+            "{ add } from \"./mathUtils\";",
+            "{ formatResult } from \"./stringUtils\";",
+            "{ processTemplate } from \"./templateUtils\";"
+          ],
+          "default": [
+            "_ from \"lodash\";"
+          ],
+          "namespace": [],
+          "type_only": [],
+          "side_effect": []
+        },
+        "exports": {
+          "named": [
+            "const calculateAverage = (numbers: number[]): number => {",
+            "const processData = (data: number[]): string => {",
+            "const createSummary = (data: number[]): string => {"
+          ],
+          "default": [],
+          "re_exports": [],
+          "type_only": []
+        },
+        "issues": [],
+        "metrics": {
+          "import_count": 4,
+          "export_count": 3,
+          "complexity_score": 7
+        }
+      },
+      "/home/espreso/Desktop/service_app/files_from_git/mathUtils.ts": {
+        "imports": {
+          "named": [
+            "{ v4 as uuidv4 } from \"uuid\";"
+          ],
+          "default": [],
+          "namespace": [],
+          "type_only": [],
+          "side_effect": []
+        },
+        "exports": {
+          "named": [
+            "const add = (a: number, b: number): number => a + b;",
+            "const createConfig = (precision: number = 2): MathConfig => {"
+          ],
+          "default": [
+            "default defaultConfig;"
+          ],
+          "re_exports": [],
+          "type_only": [
+            "type MathConfig = {"
+          ]
+        },
+        "issues": [],
+        "metrics": {
+          "import_count": 1,
+          "export_count": 4,
+          "complexity_score": 5
+        }
+      },
+      "/home/espreso/Desktop/service_app/files_from_git/statsUtils.ts": {
+        "imports": {
+          "named": [
+            "{ add } from './mathUtils.js';",
+            "{ formatResult } from './stringUtils.js';",
+            "{ processTemplate } from './templateUtils';",
+            "{ calculateAverage } from './arrayUtils.js';"
+          ],
+          "default": [],
+          "namespace": [],
+          "type_only": [],
+          "side_effect": []
+        },
+        "exports": {
+          "named": [
+            "const generateReport = (numbers: number[]): string => {",
+            "const calculateStats = (data: number[]): {"
+          ],
+          "default": [
+            "default generateReport;"
+          ],
+          "re_exports": [],
+          "type_only": []
+        },
+        "issues": [],
+        "metrics": {
+          "import_count": 4,
+          "export_count": 3,
+          "complexity_score": 7
+        }
+      },
+      "/home/espreso/Desktop/service_app/files_from_git/stringUtils.ts": {
+        "imports": {
+          "named": [
+            "{ add } from './mathUtils';",
+            "{ formatResult } from './stringUtils';",
+            "{ processTemplate } from './templateUtils';",
+            "{ calculateAverage } from './arrayUtils';"
+          ],
+          "default": [],
+          "namespace": [],
+          "type_only": [],
+          "side_effect": []
+        },
+        "exports": {
+          "named": [
+            "const generateReport = (numbers: number[]): string => {",
+            "const calculateStats = (data: number[]): {"
+          ],
+          "default": [
+            "default generateReport;"
+          ],
+          "re_exports": [],
+          "type_only": []
+        },
+        "issues": [],
+        "metrics": {
+          "import_count": 4,
+          "export_count": 3,
+          "complexity_score": 7
+        }
+      },
+      "/home/espreso/Desktop/service_app/files_from_git/templateUtils.ts": {
+        "imports": {
+          "named": [
+            "{ createConfig } from \"./mathUtils\";",
+            "{ formatResult } from \"./stringUtils\";"
+          ],
+          "default": [],
+          "namespace": [],
+          "type_only": [],
+          "side_effect": []
+        },
+        "exports": {
+          "named": [
+            "const processTemplate = (text: string, type: string): string =>",
+            "const applyMathFormat = (value: number): string => {",
+            "const validateTemplate = (template: string): boolean =>"
+          ],
+          "default": [
+            "default processTemplate;"
+          ],
+          "re_exports": [],
+          "type_only": []
+        },
+        "issues": [],
+        "metrics": {
+          "import_count": 2,
+          "export_count": 4,
+          "complexity_score": 6
+        }
+      }
+    },
+    "summary": {
+      "total_files": 5,
+      "total_external_dependencies": 13,
+      "circular_dependencies_detected": 0
+    }
+  }
+}
