@@ -75,3 +75,4 @@ curl http://localhost:3000/results/940f5b80-ce3a-475d-8836-16acf7af6959
 - I should have made more tests to test my solution, but i didn't.
 - Despite being able to retrieve diff extensions, there are imports (like require, ...) which are in legacy/older versions code of js, which i haven't covered as case.
 - Despite my first time writing in ts, it wasn't so bad as i thought it will be.
+- I am very sorry if i had left some console.log statements which i used for debugging.
